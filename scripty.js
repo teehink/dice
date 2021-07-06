@@ -2,8 +2,13 @@
 //let player2Score = 0
 
 
-let player1 = [score, scoreBoard, die, turn]
+const player1 = {score: 0, scoreBoard: 0, die, turn: true}
+
+const
+
 let player2 = [score, scoreBoard, die, turn]
+let player2.score = 0
+let player2.scoreBoard = 0
 
 let player1Turn = true;
 
