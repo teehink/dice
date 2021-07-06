@@ -1,28 +1,29 @@
-let player1Score = 0
-let player2Score = 0
+//let player1Score = 0
+//let player2Score = 0
+
+
+let player1 = [score, scoreBoard, die, turn]
+let player2 = [score, scoreBoard, die, turn]
+
 let player1Turn = true;
-
-//let player1 = [score = 0, scoreBoard = document.getElementById('player1Scoreboard'), die = document.getElementById('player1Die')]
-
-//let player2 = [score = 0, scoreBoard = document.getElementById('player2Scoreboard'), die = document.getElementById('player2Die')]
 
 const rollBtn = document.getElementById('rollBtn')
 const resetBtn = document.getElementById('resetBtn')
 const message = document.getElementById('message')
-const player1Scoreboard = document.getElementById('player1Scoreboard')
-const player2Scoreboard = document.getElementById('player2Scoreboard')
-const player1Die = document.getElementById('player1Die')
-const player2Die = document.getElementById('player2Die')
+//const player1Scoreboard = document.getElementById('player1Scoreboard')
+//const player2Scoreboard = document.getElementById('player2Scoreboard')
+//const player1Die = document.getElementById('player1Die')
+//const player2Die = document.getElementById('player2Die')
 
 
 rollBtn.addEventListener('click', function() {
   const dieRoll = Math.floor(Math.random() *6) + 1
   clearActivePlayer()
     if (player1Turn) {
-      player1Die.classList.add('active')
-      player1Die.textContent = dieRoll
-      player1Score += dieRoll
-      player1Scoreboard.textContent = player1Score
+      player1.die.classList.add('active')
+      player1.die.textContent = dieRoll
+      player1.score += dieRoll
+      player1.scoreboard.textContent = player1Score
       message.textContent = "Player 2 Turn"
       //player1Turn = false
     } else {
